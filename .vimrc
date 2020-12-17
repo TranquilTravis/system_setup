@@ -7,6 +7,9 @@ set incsearch 		" highlight incremental search
 syntax on 
 " set mapleader
 " let mapleader = ";"
+" show full path of file name underneath
+set statusline+=%F
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -44,6 +47,8 @@ Plugin 'ggreer/the_silver_searcher'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'frazrepo/vim-rainbow'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'mkitt/tabline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,6 +67,10 @@ filetype plugin indent on    " required
 
 " nerdtree settings
 " autocmd vimenter * NERDTree
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
@@ -85,6 +94,9 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " ############# end of ctags settings
+
+" color scheme"
+colorscheme Atelier_SeasideDark
 
 " map Tagbar to F8
 nmap <F4> :TagbarToggle<CR>
@@ -124,3 +136,14 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>

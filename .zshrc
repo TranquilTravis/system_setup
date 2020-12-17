@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # cn develop machine
-alias dev="ssh dongqi.dotabi@10.224.20.123"
+alias dev="ssh dongqi.dotabi@10.227.81.77"
 # maliva develop machine (no use)
 alias vadev="ssh dongqi.dotabi@10.231.250.130"
 # ug machine (no use)
@@ -109,6 +109,8 @@ alias ugdev="ssh dongqi.dotabi@10.25.58.204"
 alias nugdev="ssh dongqi.dotabi@10.10.23.196"
 # ug i18 machine
 alias i18dev="ssh dongqi.dotabi@10.99.228.53"
+# 推荐 machine
+alias rdev="ssh dongqi.dotabi@10.148.54.42"
 
 # add for miniconda
 export PATH="/Users/dongqi/miniconda3/bin:$PATH"
