@@ -1,0 +1,4 @@
+https://tlanyan.me/shadowsockr-shadowsocksr-shadowsocksrr-clients/
+https://medium.com/@crueda/gunicorn-flask-with-a-side-of-grpc-98a74c9285a7
+https://helm.sh/docs/intro/quickstart/
+https://web.mit.edu/kerberos/

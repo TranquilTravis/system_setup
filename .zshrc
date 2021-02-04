@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # cn develop machine
-alias dev="ssh dongqi.dotabi@10.227.81.77"
+alias dev="ssh -X dongqi.dotabi@10.227.81.77"
 # maliva develop machine (no use)
 alias vadev="ssh dongqi.dotabi@10.231.250.130"
 # ug machine (no use)
@@ -133,15 +133,27 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export MONO_GAC_PREFIX="/usr/local"
 
 # shortcut to environment
-alias rec="source activate rec"
-alias euler="source activate euler"
-alias py27="source activate py27"
-alias de="conda deactivate"
-alias relay="ssh relay.byted.org"
+activate ()
+{
+  source ~/python_env/"$1"/bin/activate
+}
 
-alias kinit="kinit dongqi.dotabi@BYTEDANCE.COM"
+alias kinit_dq="kinit dongqi.dotabi@BYTEDANCE.COM"
+alias kinit_key="kinit --keychain dongqi.dotabi@BYTEDANCE.COM"
 
 HOME_DIR="/Users/dongqi"
 Git="$HOME_DIR/Documents/myGit/"
+
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# byteshell
+psm ()
+{
+  byteshell --strict --psm $1
+}
+
+activate euler
